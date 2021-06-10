@@ -11,4 +11,7 @@ html
     .app-title.navbar.navbar-expand-md.navbar-light.bg-light
       .navbar-brand Success
     .container
+      - if flash.notice.present?
+        .alert.alert-success= flash.notice
+        /nilや空白でないnoticeのflashメッセージが存在すれば表示される
       = yield
