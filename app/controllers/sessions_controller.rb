@@ -7,8 +7,8 @@ class SessionsController < ApplicationController
   def create
     user = User.find_by(email: session_params[:email])
 
-    if user&.authenticate(sesson_params[:password]) #authenticateはhas_secure_passwordで自動追加された認証のためのメソッド
-      sesson[:user_id] = user.id
+    if user&.authenticate(session_params[:password]) #authenticateはhas_secure_passwordで自動追加された認証のためのメソッド
+      session[:user_id] = user.id
       redirect_to root_url, notice: 'ログインしました。'
     else
       render :new
