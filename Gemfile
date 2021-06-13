@@ -68,3 +68,5 @@ gem 'bootstrap', '~> 4.5'
 gem 'jquery-rails'
 
 gem 'rails_autolink'
+
+gem 'ransack'
