@@ -3,7 +3,7 @@ class TasksController < ApplicationController
 
   def index
     @q = current_user.tasks.ransack(params[:q])
-    @tasks = @q.result(distinct: true).page(params[:id]) #デフォルトでレコード25件
+    @tasks = @q.result(distinct: true).page(params[:page]) #デフォルトでレコード25件
 
     respond_to do |format|
       format.html
@@ -48,7 +48,7 @@ class TasksController < ApplicationController
   private
 
   def task_params
-    params.require(:task).permit(:name, :description)
+    params.require(:task).permit(:name, :description, :image)
   end
 
   def set_task
