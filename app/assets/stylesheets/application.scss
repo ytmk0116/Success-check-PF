@@ -15,3 +15,27 @@
  */
 
 @import "bootstrap";
+
+h1 {
+  font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+body {
+   background-color:#CCCCCC;
+}
+
+table{
+  width: 100%;
+  border-spacing: 0;
+}
+
+table th{
+  border-bottom: solid 2px #fb5144;
+  padding: 10px 0;
+}
+
+table td{
+  border-bottom: solid 2px #ddd;
+  text-align: center;
+  padding: 10px 0;
+}
