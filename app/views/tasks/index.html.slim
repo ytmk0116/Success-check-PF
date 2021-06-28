@@ -1,4 +1,4 @@
-h1 タスク一覧
+h1 Task List
 
 = search_form_for @q, class: 'mb-5' do |f|
   .form-group.row
@@ -12,7 +12,7 @@ h1 タスク一覧
   .form-group
     = f.submit class: 'btn btn-outline-primary'
 
-=link_to '新規登録', new_task_path, class: 'btn btn-primary'
+=link_to 'New Task', new_task_path, class: 'btn btn-success'
 
 .mb-3
   = paginate @tasks
@@ -35,6 +35,6 @@ table.table.table-hover
          = link_to '削除', task, method: :delete, data: { confirm: "タスク「#{task.name}」を削除します。よろしいですか？" }, class: 'btn btn-danger'
          /method: :deleteの指定によりDELETEメソッドでリクエストされる
 
-= link_to 'エクスポート', tasks_path(format: :csv), class: 'btn btn-primary mr-3'
+= link_to 'Export', tasks_path(format: :csv), class: 'btn btn-success mr-3'
 
 
