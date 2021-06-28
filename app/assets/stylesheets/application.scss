@@ -39,3 +39,24 @@ table td{
   text-align: center;
   padding: 10px 0;
 }
+
+.alert {
+  position: fixed;
+  width: inherit;
+  max-width: inherit;
+  box-sizing: border-box;
+  animation-name: fadein-keyframes;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+  animation-duration: 3s;
+}
+
+  @keyframes fadein-keyframes {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+
+    }
+  }
